@@ -28,7 +28,7 @@ sub search {
 
 =head1 NAME
 
-Net::Twitter::Diff - Twitter Diff
+Net::Twitter::Search- Twitter Search 
 
 =head1 SYNOPSYS
 
