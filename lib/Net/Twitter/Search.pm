@@ -6,7 +6,7 @@ use base qw/Net::Twitter/;
 use Array::Diff;
 use Data::Dumper;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
