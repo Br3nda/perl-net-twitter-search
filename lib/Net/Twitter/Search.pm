@@ -6,7 +6,7 @@ use base qw/Net::Twitter/;
 use Array::Diff;
 use Data::Dumper;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
@@ -54,12 +54,11 @@ For searching twitter - handy for bots
 
 =head1 METHOD
 
-=head2 diff
+=head2 search 
 
 run search
 
 response hash
-
 
 =head1 SEE ALSO
 
