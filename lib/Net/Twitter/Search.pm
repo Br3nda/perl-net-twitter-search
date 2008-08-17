@@ -5,7 +5,7 @@ use strict;
 use base qw/Net::Twitter/;
 use Data::Dumper;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
