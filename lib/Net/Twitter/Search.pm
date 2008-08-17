@@ -3,10 +3,9 @@ package Net::Twitter::Search;
 use warnings;
 use strict;
 use base qw/Net::Twitter/;
-use Array::Diff;
 use Data::Dumper;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
