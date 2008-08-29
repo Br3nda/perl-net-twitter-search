@@ -5,7 +5,7 @@ use strict;
 use base qw/Net::Twitter/;
 use Data::Dumper;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
@@ -27,7 +27,7 @@ sub search {
 
 =head1 NAME
 
-Net::Twitter::Search- Twitter Search 
+Net::Twitter::Search Twitter Search 
 
 =head1 SYNOPSYS
 
