@@ -3,15 +3,15 @@ package Net::Twitter::Search;
 use warnings;
 use strict;
 use base qw/Net::Twitter/;
-use Data::Dumper;
+use URI::Escape;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
     my $self = shift;
-    my $query= shift;
-    my $url = 'http://search.twitter.com/search.json?q=' . $query;
+    my $query = shift;
+    my $url = 'http://search.twitter.com/search.json?q=' . URI::Escape::uri_escape($query);
     my $req = $self->{ua}->get($url);
 
     die 'fail to connect to twitter. maybe over Rate limit exceeded or auth error' unless $req->is_success;
@@ -65,6 +65,6 @@ L<Net::Twitter>
 
 =head1 AUTHOR
 
-Brenda Wallace <brenda@wallace.net.nz>
+Brenda Wallace <shiny@cpan.org>
 
 =cut
