@@ -81,28 +81,36 @@ returns: hash
 =head1 EXAMPLES
 
 Find tweets containing a word
+
   $results = $twitter->search('word');
 
 Find tweets from a user:
+
   $results = $twitter->search('from:br3nda');
 
 Find tweets to a user:
+
   $results = $twitter->search('to:serenecloud');
 
 Find tweets referencing a user:
+
   $results = $twitter->search('@br3ndabot');
 
 Find tweets containing a hashtag:
+
   $results = $twitter->search('#perl');
 
 Combine any of the operators together:
+
   $results = $twitter->search('solaris anger from:br3nda');
 
  
-=head1 Additional Parameters
+=head1 ADDITIONAL PARAMETERS 
+
   The search method also supports the following optional URL parameters:
  
 =head2 lang
+
 Restricts tweets to the given language, given by an ISO 639-1 code.
 
   $results = $twitter->search('hello', {lang=>'en'});
@@ -111,27 +119,31 @@ Restricts tweets to the given language, given by an ISO 639-1 code.
 
 
 =head2 rpp
+
 The number of tweets to return per page, up to a max of 100.
 
   $results = $twitter->search('love', {rpp=>'10'});
 
 =head2 page
+
 The page number to return, up to a max of roughly 1500 results (based on rpp * page)
 
   #get page 3
   $results = $twitter->search('love', {page=>'3'});
 
 =head2 since_id
+
 Returns tweets with status ids greater than the given id.
+
   $results = $twitter->search('love', {since_id=>'1021356410'});
 
 =head2 geocode
+
 returns tweets by users located within a given radius of the given latitude/longitude, where the user's location is taken from their Twitter profile. The parameter value is specified by "latitide,longitude,radius", where radius units must be specified as either "mi" (miles) or "km" (kilometers).
 
  $results = $twitter->search('coffee', {geocode=> '40.757929,-73.985506,25km'});
 
 Note that you cannot use the near operator via the API to geocode arbitrary locations; however you can use this geocode parameter to search near geocodes directly.
-
 
 
 =head1 SEE ALSO
