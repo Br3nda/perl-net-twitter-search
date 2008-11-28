@@ -5,7 +5,7 @@ use strict;
 use base qw/Net::Twitter/;
 use URI::Escape;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 #http://search.twitter.com/search.json?q=<query>
 
 sub search {
